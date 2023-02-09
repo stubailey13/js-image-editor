@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple image editor built using JTML, CSS and JavaScript">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Editor</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="editor">
+            <div class="section">
+            <button class="accordion">Color</button>
+            <div class="panel">
+                <div class="filter">
+                    <label for="contrast">Contrast</label>
+                    <input type="range" min="0" max="200" 
+                    value="100" id="contrast">
+                </div>
+                <div class="filter">
+                    <label for="hue-rotate">Hue</label>
+                    <input type="range" min="0" max="360" 
+                    value="0" id="hue-rotate">
+                </div>
+                <div class="filter">
+                    <label for="sepia">Sepia</label>
+                    <input type="range" min="0" max="100" 
+                    value="0" id="sepia">
+                </div>
+                <div class="filter">
+                    <label for="grayscale">Grayscale</label>
+                    <input type="range" min="0" max="100" 
+                    value="0" id="grayscale">
+                </div>
+            </div>
+            <button class="accordion">Effects</button>
+            <div class="panel">
+                <div class="filter">
+                    <label for="blur">Blur</label>
+                    <input type="range" min="0" max="5" 
+                    value="0" step="0.1" id="blur">
+                </div>
+                <div class="filter">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" min="0" max="100" 
+                    value="100" id="brightness">
+                </div>
+                <div class="filter">
+                    <label for="opacity">Opacity</label>
+                    <input type="range" min="0" max="100" 
+                    value="100" id="opacity">
+                </div>
+            </div>
+                
+            <button class="accordion">Transform</button>
+            <div class="panel">
+                <div class="flip-buttons">
+                    <div class="flip-option">
+                        <input type="radio" name="flip" id="no-flip" checked>
+                        <label for="no-flip">No Flip</label>
+                    </div>
+                    <div class="flip-option">
+                        <input type="radio" name="flip" id="flip-x">
+                        <label for="flip-x">Horizontal Flip</label>
+                    </div>
+                    <div class="flip-option">
+                        <input type="radio" name="flip" id="flip-y">
+                        <label for="flip-y">Vertical Flip</label>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="result">
+            <figure class="image-container">
+                <img id="chosen-image">
+            </figure>
+            <input type="file" id="upload-button"
+            accept="Image/*">
+            <label for="upload-button">Choose An Image</label>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

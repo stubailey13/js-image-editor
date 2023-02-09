@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: #CAF0F8;
+}
+.wrapper{
+    width: 85vw;
+    min-height: 50vmin;
+    padding: 50px 30px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+.editor{  
+    min-height: 35vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+.editor label{
+    font-size: 2.8vmin;
+    color: #2a292a;
+    font-weight: 400;
+}
+.editor input{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+}
+.flip-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.flip-buttons .flip-option{
+    margin-top: 10px;
+}
+.result{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.result img{
+    display: block;
+    position: relative;
+    max-width: calc(100% - 4vmin);
+    max-height: 45vmin;
+    margin: auto;
+}
+.image-container{
+    display: none;
+}
+input[type="file"]{
+    display: none;
+}
+.result label{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    background-color: #015DC8;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px 0;
+    border-radius: 5px;
+    font-size: 2.8vmin;
+    font-weight: 400;
+    cursor: pointer;
+}
+@media screen and (max-width: 620px) {
+    .wrapper{
+        width: 95vw;
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap:  10px;
+    }
+    .editor{
+        grid-row: 2;
+    }
+    .flip-buttons{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .flip-buttons .flip-option{
+        margin-top: 0;
+    }
+}
+/* Accordion styling:  */
+.accordion {
+    background-color: #ffffff;
+    color: #444;
+    font-size: 2.8vmin;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    border-bottom: solid #4444441f 1px;
+  }
+  .active, .accordion:hover {
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    border: none;
+  }
+  .panel {
+    padding: 20px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0px 0px 5px 5px;
+  }
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  .section {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    width: auto;
+  }
